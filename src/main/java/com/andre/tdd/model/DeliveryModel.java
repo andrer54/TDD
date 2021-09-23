@@ -4,59 +4,60 @@ import java.time.LocalDate;
 
 public class DeliveryModel {
     private String id;
-    private String reserveName;
-    private LocalDate checkIn;
-    private LocalDate checkOut;
-    private int numberGuests;
+    private String compradorName;
+    private LocalDate dataCompra;
+    private LocalDate dataEntrega;
+    private int numeroDePacotes;
 
-    public DeliveryModel(String id, String reserveName, LocalDate checIn, LocalDate checkOut, int numberGuests){
-        this.id = id;
-        this.reserveName = reserveName;
-        this.checkIn = checIn;
-        this.checkOut = checkOut;
-        this.numberGuests = numberGuests;
-        
+    public String getId() {
+        return this.id;
     }
 
-    public String getId(){
-        return id;
-    }
-    public void setId(String id){
+    public void setId(String id) {
         this.id = id;
     }
-    public String getReserveName() {
-        return this.reserveName;
+
+    public String getCompradorName() {
+        return this.compradorName;
     }
 
-    public void setReserveName(String reserveName) {
-        this.reserveName = reserveName;
+    public void setCompradorName(String compradorName) {
+        this.compradorName = compradorName;
     }
 
-    public LocalDate getCheckIn() {
-        return this.checkIn;
+    public LocalDate getDataCompra() {
+        return this.dataCompra;
     }
 
-    public void setCheckIn(LocalDate checkIn) {
-        this.checkIn = checkIn;
+    public void setDataCompra(LocalDate dataCompra) {
+        this.dataCompra = dataCompra;
     }
 
-    public LocalDate getCheckOut() {
-        return this.checkOut;
+    public LocalDate getDataEntrega() {
+        return this.dataEntrega;
     }
 
-    public void setCheckOut(LocalDate checkOut) {
-        this.checkOut = checkOut;
+    public void setDataEntrega(LocalDate dataEntrega) {
+        this.dataEntrega = dataEntrega;
     }
 
-    public int getNumberGuests() {
-        return this.numberGuests;
+    public int getNumeroDePacotes() {
+        return this.numeroDePacotes;
     }
 
-    public void setNumberGuests(int numberGuests) {
-        this.numberGuests = numberGuests;
+    public void setNumeroDePacotes(int numeroDePacotes) {
+        this.numeroDePacotes = numeroDePacotes;
     }
-    
 
+    public DeliveryModel(String id, String compradorName, LocalDate dataCompra, LocalDate dataEntrega, int numeroDePacotes) {
+        this.id = id;
+        this.compradorName = compradorName;
+        this.dataCompra = dataCompra;
+        this.dataEntrega = dataEntrega;
+        this.numeroDePacotes = numeroDePacotes;
+    }
 
+    public DeliveryModel() {
+    }
 
-}
+}    
