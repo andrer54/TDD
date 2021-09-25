@@ -2,12 +2,37 @@ package com.andre.tdd.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class DeliveryModel {
+    @Id
     private String id;
     private String compradorName;
     private LocalDate dataCompra;
     private LocalDate dataEntrega;
-    private int numeroDePacotes;
+    private int qtdPacotes;
+
+
+    public DeliveryModel(String id, String compradorName, LocalDate dataCompra, LocalDate dataEntrega, int qtdPacotes) {
+        this.id = id;
+        this.compradorName = compradorName;
+        this.dataCompra = dataCompra;
+        this.dataEntrega = dataEntrega;
+        this.qtdPacotes = qtdPacotes;
+    }
+    public int getQtdPacotes() {
+        return this.qtdPacotes;
+    }
+
+    public void setQtdPacotes(int qtdPacotes) {
+        this.qtdPacotes = qtdPacotes;
+    }
+
+
+
+
 
     public String getId() {
         return this.id;
@@ -41,23 +66,10 @@ public class DeliveryModel {
         this.dataEntrega = dataEntrega;
     }
 
-    public int getNumeroDePacotes() {
-        return this.numeroDePacotes;
-    }
 
-    public void setNumeroDePacotes(int numeroDePacotes) {
-        this.numeroDePacotes = numeroDePacotes;
-    }
 
-    public DeliveryModel(String id, String compradorName, LocalDate dataCompra, LocalDate dataEntrega, int numeroDePacotes) {
-        this.id = id;
-        this.compradorName = compradorName;
-        this.dataCompra = dataCompra;
-        this.dataEntrega = dataEntrega;
-        this.numeroDePacotes = numeroDePacotes;
-    }
 
-    public DeliveryModel() {
-    }
+
+
 
 }    

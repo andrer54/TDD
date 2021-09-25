@@ -2,10 +2,10 @@ package com.andre.tdd;
 
 import java.time.LocalDate;
 import java.util.Optional;
+
 import com.andre.tdd.model.DeliveryModel;
 import com.andre.tdd.repository.DeliveryRepository;
 import com.andre.tdd.service.DeliveryService;
-
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,7 +50,7 @@ public class DeliveryServiceTest {
         LocalDate dataCompra = LocalDate.parse("2021-10-10");
         LocalDate dataEntrega = LocalDate.parse("2021-10-20");
 
-        DeliveryModel deliveryModel = new DeliveryModel("1", "andre", dataCompra, dataEntrega,2);
+        DeliveryModel deliveryModel = new DeliveryModel("1", "andre", dataCompra, dataEntrega, 3);
      
         Mockito.when(deliveryRepository.findByCompradorName(deliveryModel.getCompradorName()))
                     .thenReturn(Optional.of(deliveryModel));
