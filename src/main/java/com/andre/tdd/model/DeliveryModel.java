@@ -14,6 +14,9 @@ public class DeliveryModel {
     private LocalDate dataEntrega;
     private int qtdPacotes;
 
+    public DeliveryModel() {
+    }
+
 
     public DeliveryModel(String id, String compradorName, LocalDate dataCompra, LocalDate dataEntrega, int qtdPacotes) {
         this.id = id;
